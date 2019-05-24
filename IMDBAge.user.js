@@ -222,34 +222,26 @@ function getNameDates(born, died) {
         /* if new style */
         if (newStyle()) {
                 /* find the birth date */
-                var nodes = document.evaluate(
-                        "//time[contains(@itemprop,'birthDate')]",
-                        document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-                        null);
-                
-                if (nodes.snapshotLength == 1) {
-                        date = nodes.snapshotItem(0).getAttribute("datetime").split("-")
+                var bornElm = document.querySelector("#name-born-info time[datetime]");
+                if (bornElm) {
+                        date = bornElm.getAttribute("datetime").split("-")
                         born.setFullYear(date[0]);
                         born.setMonth(date[1] - 1);
                         born.setDate(date[2]);
                         alive = true
                 }
-                
+
                 /* find the death date */
-                var nodes = document.evaluate(
-                        "//time[contains(@itemprop,'deathDate')]",
-                        document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-                        null);
-                
-                if (nodes.snapshotLength == 1) {
-                        date=nodes.snapshotItem(0).getAttribute("datetime").split("-")
+                var deathElm = document.querySelector("#name-death-info time[datetime]");
+                if (deathElm) {
+                        date=deathElm.getAttribute("datetime").split("-")
                         died.setFullYear(date[0]);
                         died.setMonth(date[1] - 1);
                         died.setDate(date[2]);
                         alive = false
                 }
         /* else old style */
-				} else {
+		} else {
                 /* find the birth date */
                 var nodes = document.evaluate(
                         "//div[contains(@class,'info-content')]/a[contains(@href,'birth')]",
