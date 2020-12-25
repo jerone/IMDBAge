@@ -68,7 +68,7 @@ var doFilmAge  = true;
 // @namespace   http://www.stewarts.org.uk
 // @include     http*://*imdb.com/name/*
 // @include     http*://*imdb.com/title/*
-// @icon        http://www.stewarts.org.uk/tomsweb/IMDBAge?action=AttachFile&do=get&target=icon.png  
+/# // @icon        http://www.stewarts.org.uk/tomsweb/IMDBAge?action=AttachFile&do=get&target=icon.png  */
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // ==/UserScript==
 
