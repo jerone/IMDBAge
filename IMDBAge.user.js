@@ -37,6 +37,7 @@
     This script is not abandoned, email thomas@stewarts.org.uk if it breaks.
 
     Changelog
+    * 2.13.1 multiple fixes by @jerone
     * 2.13 added https urls, removed scriptvals, fixed title pages
     * 2.12 fixed adding ages to individual films and fixed old style
     * 2.11 fixed date grabbing again
@@ -63,12 +64,12 @@ var doFilmAge  = true;
 // ==UserScript==
 // @name        IMDBAge
 // @description Adds the age and other various info onto IMDB pages.
-// @version     2.13
+// @version     2.13.1
 // @author      Thomas Stewart
 // @namespace   http://www.stewarts.org.uk
 // @include     http*://*imdb.com/name/*
 // @include     http*://*imdb.com/title/*
-// @icon        http://www.stewarts.org.uk/tomsweb/IMDBAge?action=AttachFile&do=get&target=icon.png  
+// @icon        https://www.imdb.com/favicon.ico
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // ==/UserScript==
 
